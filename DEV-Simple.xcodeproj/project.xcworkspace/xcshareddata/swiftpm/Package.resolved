@@ -2,33 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
-        "state": {
-          "branch": null,
-          "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
-          "version": "5.4.3"
-        }
-      },
-      {
-        "package": "AlamofireImage",
-        "repositoryURL": "https://github.com/Alamofire/AlamofireImage.git",
-        "state": {
-          "branch": null,
-          "revision": "98cbb00ce0ec5fc8e52a5b50a6bfc08d3e5aee10",
-          "version": "4.2.0"
-        }
-      },
-      {
-        "package": "ForemWebView",
-        "repositoryURL": "https://github.com/forem/ForemWebView-ios.git",
-        "state": {
-          "branch": "main",
-          "revision": "5273f1b972390d81115e418827e7ebd158b77a60",
-          "version": null
-        }
-      },
-      {
         "package": "MarqueeLabel",
         "repositoryURL": "https://github.com/cbpowell/MarqueeLabel",
         "state": {
@@ -47,15 +20,6 @@
         }
       },
       {
-        "package": "PryntTrimmerView",
-        "repositoryURL": "https://github.com/HHK1/PryntTrimmerView",
-        "state": {
-          "branch": null,
-          "revision": "ac1b60a22c7e6a6514de7a66d2f3d5b537c956d5",
-          "version": "4.0.2"
-        }
-      },
-      {
         "package": "PushNotifications",
         "repositoryURL": "https://github.com/pusher/push-notifications-swift",
         "state": {
@@ -71,24 +35,6 @@
           "branch": null,
           "revision": "d458564516e5676af9c70b4f4b2a9178294f1bc6",
           "version": "5.0.1"
-        }
-      },
-      {
-        "package": "Stevia",
-        "repositoryURL": "https://github.com/freshOS/Stevia",
-        "state": {
-          "branch": null,
-          "revision": "e1e8dc40deab3a863a35a7a0aab10f7304f4b42a",
-          "version": "5.1.0"
-        }
-      },
-      {
-        "package": "YPImagePicker",
-        "repositoryURL": "https://github.com/Yummypets/YPImagePicker",
-        "state": {
-          "branch": null,
-          "revision": "2cf2d150bb0861f2079bc44b56c17aabf5e5d5aa",
-          "version": null
         }
       }
     ]
