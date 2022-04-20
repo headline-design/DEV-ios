@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ForemWebView
 
 class ThemeManager {
     private(set) static var useLightIcons = false

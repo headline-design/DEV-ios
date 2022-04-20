@@ -10,8 +10,8 @@ import UIKit
 import AVKit
 import SwiftUI
 import SnapKit
+import WebKit
 
-import ForemWebView
 import PushNotifications
 import NotificationBannerSwift
 
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         if let developmentURL = ProcessInfo.processInfo.environment["DEV_URL"] {
             return developmentURL
         }
-        return "https://dev.to"
+        return "https://www.forum.ax/"
     }()
 
     override func viewDidLoad() {
@@ -55,7 +55,10 @@ class ViewController: UIViewController {
         activityIndicator.hidesWhenStopped = true
         backButton.isEnabled = false
         forwardButton.isEnabled = false
+        
+        activityIndicator.isHidden = true
 
+        webView.customUserAgent = "safari";
         webView.foremWebViewDelegate = self
         webView.load(devToURL)
 
@@ -72,7 +75,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showNewsModalSheet()
+        //showNewsModalSheet()
     }
 
     // MARK: - Reachability
@@ -213,17 +216,21 @@ extension ViewController: ForemWebViewDelegate {
 
     func didFailNavigation() {
         // Protocol requirement not yet implemented
+        print("didFailNavigation")
     }
 
     func didLogin(userData: ForemUserData) {
         // NoProtocol requirement not yet implemented
+        print("didLogin")
     }
 
     func didLogout(userData: ForemUserData) {
         // Protocol requirement not yet implemented
+        print("didLogout")
     }
 
     func willStartNativeVideo(playerController: AVPlayerViewController) {
+        print("willStartNativeVideo")
         if playerController.presentingViewController == nil {
             present(playerController, animated: true) {
                 playerController.player?.play()
@@ -232,14 +239,17 @@ extension ViewController: ForemWebViewDelegate {
     }
 
     func requestedExternalSite(url: URL) {
+        print("requestedExternalSite")
         performSegue(withIdentifier: DoAction.openExternalURL, sender: url)
     }
 
     func requestedMailto(url: URL) {
+        print("requestedMailto")
         openURL(url)
     }
 
     func didStartNavigation() {
+        print("didStartNavigation")
         let reachability = Network.reachability
         guard let isNetworkReachable = reachability?.isReachable, isNetworkReachable else {
             errorBanner.show()
@@ -250,6 +260,7 @@ extension ViewController: ForemWebViewDelegate {
     }
 
     func didFinishNavigation() {
+        print("didFinishNavigation")
         activityIndicator.isHidden = true
         activityIndicator.stopAnimating()
     }
